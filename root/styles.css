@@ -1,4 +1,4 @@
-/* Reset & grundlayout */
+/* RESET & LAYOUT */
 * {
   margin: 0;
   padding: 0;
@@ -6,25 +6,27 @@
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(to right, #fdfbfb, #ebedee);
-  color: #333;
+  font-family: 'Courier New', monospace;
+  background: linear-gradient(to bottom right, #111, #222);
+  color: #f5f5f5;
   padding: 1rem;
 }
 
 /* HEADER */
 header {
-  background-color: #1e272e;
+  background: linear-gradient(to right, #ff0080, #7928ca);
   color: #fff;
   padding: 2rem 1rem;
   border-radius: 12px;
   margin-bottom: 2rem;
   text-align: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 10px #ff00ff, 0 0 20px #00ffff;
+  text-shadow: 1px 1px #000;
 }
 
 header h1 {
-  font-size: 2.2rem;
+  font-size: 3rem;
+  font-family: 'Press Start 2P', cursive;
   margin-bottom: 1rem;
 }
 
@@ -33,19 +35,22 @@ nav {
 }
 
 nav button {
-  background-color: #f39c12;
-  color: white;
-  border: none;
+  background-color: #00ffff;
+  color: #111;
+  border: 2px solid #fff;
   padding: 0.6rem 1.2rem;
   margin: 0.3rem;
-  border-radius: 8px;
+  border-radius: 4px;
   font-size: 1rem;
+  font-family: 'Courier New', monospace;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 nav button:hover {
-  background-color: #e67e22;
+  background-color: #ff00ff;
+  color: #000;
+  border-color: #00ffff;
 }
 
 /* SÖK */
@@ -59,29 +64,31 @@ nav button:hover {
 
 #searchInput {
   padding: 0.6rem 1rem;
-  border-radius: 8px;
-  border: none;
+  border-radius: 4px;
+  border: 2px solid #ff00ff;
   width: 280px;
-  max-width: 100%;
+  background-color: #000;
+  color: #0ff;
   font-size: 1rem;
 }
 
 #searchBtn {
   padding: 0.6rem 1.2rem;
-  background-color: #3498db;
-  color: white;
-  border: none;
-  border-radius: 8px;
+  background-color: #ff0080;
+  color: #fff;
+  border: 2px solid #0ff;
+  border-radius: 4px;
   font-size: 1rem;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  font-family: 'Courier New', monospace;
 }
 
 #searchBtn:hover {
-  background-color: #2980b9;
+  background-color: #0ff;
+  color: #000;
 }
 
-/* MAIN */
+/* INNEHÅLL */
 #content {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -90,51 +97,56 @@ nav button:hover {
 
 /* FILMKORT */
 .movie-card {
-  background-color: white;
+  background-color: #111;
+  border: 2px solid #ff00ff;
   padding: 1rem;
-  border-radius: 12px;
+  border-radius: 8px;
   text-align: center;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px #0ff;
   transition: transform 0.3s ease;
 }
 
 .movie-card:hover {
-  transform: translateY(-5px);
+  transform: scale(1.03);
+  box-shadow: 0 0 15px #ff00ff;
 }
 
 .movie-card img {
   width: 100%;
-  border-radius: 8px;
+  border-radius: 6px;
   margin-bottom: 1rem;
 }
 
 .movie-card h3 {
   font-size: 1.2rem;
-  color: #2c3e50;
+  color: #ff00ff;
   margin-bottom: 0.5rem;
 }
 
 .movie-card p {
   font-size: 0.9rem;
-  margin-bottom: 0.3rem;
+  color: #ccc;
 }
 
 /* SÖKRESULTAT */
 #content div:not(.movie-card) {
-  background-color: #fff;
+  background-color: #222;
   padding: 1rem;
-  border-radius: 12px;
-  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  border: 1px solid #0ff;
+  box-shadow: 0 0 8px #0ff;
 }
 
 #content h3 {
   font-size: 1.1rem;
   margin-bottom: 0.5rem;
+  color: #ff00ff;
 }
 
 #content p {
   font-size: 0.9rem;
   line-height: 1.4;
+  color: #eee;
 }
 
 /* RESPONSIVT */
@@ -150,3 +162,6 @@ nav button:hover {
     align-items: center;
   }
 }
+
+/* BONUS: retro font */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
