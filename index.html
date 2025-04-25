@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FilmDatabasen</title>
+  <title>MovieMind 🎬</title>
   <link rel="stylesheet" href="root/styles.css" />
 </head>
 <body>
@@ -13,8 +13,21 @@
       <button id="popularBtn">Mest Populära</button>
       <button id="topRatedBtn">Högst Rankade</button>
     </nav>
-    <input type="text" id="searchInput" placeholder="Sök på film eller person..." />
-    <button id="searchBtn">Sök</button>
+
+    <div class="search-controls">
+      <label for="searchInput" class="visually-hidden">Sök</label>
+      <input type="text" id="searchInput" placeholder="Sök på film eller person..." />
+      <button id="searchBtn">Sök</button>
+
+      <label for="sortSelect" class="visually-hidden">Sortera</label>
+      <select id="sortSelect">
+        <option value="">Sortera...</option>
+        <option value="nameAsc">Namn A–Ö</option>
+        <option value="nameDesc">Namn Ö–A</option>
+        <option value="popularityAsc">Popularitet ↑</option>
+        <option value="popularityDesc">Popularitet ↓</option>
+      </select>
+    </div>
   </header>
 
   <main id="content"></main>

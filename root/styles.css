@@ -1,4 +1,4 @@
-/* RESET & LAYOUT */
+
 * {
   margin: 0;
   padding: 0;
@@ -12,7 +12,7 @@ body {
   padding: 1rem;
 }
 
-/* HEADER */
+
 header {
   background: linear-gradient(to right, #ff0080, #7928ca);
   color: #fff;
@@ -53,7 +53,7 @@ nav button:hover {
   border-color: #00ffff;
 }
 
-/* SÖK */
+
 .search-container {
   display: flex;
   justify-content: center;
@@ -88,14 +88,14 @@ nav button:hover {
   color: #000;
 }
 
-/* INNEHÅLL */
+
 #content {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 1.5rem;
 }
 
-/* FILMKORT */
+
 .movie-card {
   background-color: #111;
   border: 2px solid #ff00ff;
@@ -128,7 +128,7 @@ nav button:hover {
   color: #ccc;
 }
 
-/* SÖKRESULTAT */
+
 #content div:not(.movie-card) {
   background-color: #222;
   padding: 1rem;
@@ -149,7 +149,7 @@ nav button:hover {
   color: #eee;
 }
 
-/* RESPONSIVT */
+
 @media (max-width: 600px) {
   nav button,
   #searchBtn,
@@ -163,5 +163,16 @@ nav button:hover {
   }
 }
 
-/* BONUS: retro font */
+.error-message {
+  padding: 1em;
+  background-color: #ffe0e0;
+  color: #900;
+  border: 1px solid #f5c2c2;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: bold;
+  margin: 2em;
+}
+
+
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
